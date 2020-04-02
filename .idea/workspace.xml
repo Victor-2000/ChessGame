@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="36ea1226-2158-43ff-a023-c682fe850ef7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ChessGame" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VNtBca02M3Rcen2kRaszug6wxS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\VictorPC\IdeaProjects\ChessGame" />
+      <recent name="C:\Users\VictorPC\IdeaProjects\ChessGame\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\VictorPC\IdeaProjects\ChessGame" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.GameWindow">
+    <configuration name="GameWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameWindow" />
+      <module name="ChessGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GamingWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GamingWindow" />
+      <module name="ChessGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Player" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Player" />
+      <module name="ChessGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GameWindow" />
+        <item itemvalue="Application.Player" />
+        <item itemvalue="Application.GamingWindow" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36ea1226-2158-43ff-a023-c682fe850ef7" name="Default Changelist" comment="" />
+      <created>1577105260036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577105260036</updated>
+      <workItem from="1577105302430" duration="26157000" />
+      <workItem from="1577367129039" duration="19037000" />
+      <workItem from="1577475987827" duration="37865000" />
+      <workItem from="1578496217617" duration="45261000" />
+      <workItem from="1579737598377" duration="17605000" />
+      <workItem from="1580059564936" duration="1277000" />
+      <workItem from="1580381863349" duration="586000" />
+      <workItem from="1580408457003" duration="75000" />
+      <workItem from="1580861626016" duration="1407000" />
+      <workItem from="1581077586535" duration="196000" />
+      <workItem from="1581078035367" duration="1499000" />
+      <workItem from="1581690682233" duration="3954000" />
+      <workItem from="1582831295074" duration="1856000" />
+      <workItem from="1583622412450" duration="43445000" />
+      <workItem from="1583862739772" duration="26684000" />
+      <workItem from="1584109923446" duration="31731000" />
+      <workItem from="1585006232946" duration="6731000" />
+      <workItem from="1585595980126" duration="2015000" />
+      <workItem from="1585652255229" duration="1024000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1323" height="208" key="GridCell.Tab.0.bottom" timestamp="1585756221321">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="186" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584039957277" />
+    <state width="1323" height="208" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1585756221321" />
+    <state width="1323" height="174" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1578869977232" />
+    <state width="1323" height="208" key="GridCell.Tab.0.center" timestamp="1585756221321">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="186" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584039957276" />
+    <state width="1323" height="208" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1585756221321" />
+    <state width="1323" height="174" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1578869977232" />
+    <state width="1323" height="208" key="GridCell.Tab.0.left" timestamp="1585756221321">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="186" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584039957276" />
+    <state width="1323" height="208" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1585756221321" />
+    <state width="1323" height="174" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1578869977231" />
+    <state width="1323" height="208" key="GridCell.Tab.0.right" timestamp="1585756221321">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="186" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584039957277" />
+    <state width="1323" height="208" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1585756221321" />
+    <state width="1323" height="174" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1578869977232" />
+    <state width="1323" height="168" key="GridCell.Tab.1.bottom" timestamp="1584839119188">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="90" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584039036472" />
+    <state width="1323" height="168" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1584839119188" />
+    <state width="1323" height="174" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1578869977233" />
+    <state width="1323" height="168" key="GridCell.Tab.1.center" timestamp="1584839119155">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="90" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1584039036471" />
+    <state width="1323" height="168" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1584839119155" />
+    <state width="1323" height="174" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1578869977232" />
+    <state width="1323" height="168" key="GridCell.Tab.1.left" timestamp="1584839119154">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="90" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1584039036471" />
+    <state width="1323" height="168" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1584839119154" />
+    <state width="1323" height="174" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1578869977232" />
+    <state width="1323" height="168" key="GridCell.Tab.1.right" timestamp="1584839119155">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="90" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1584039036472" />
+    <state width="1323" height="168" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1584839119155" />
+    <state width="1323" height="174" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1578869977232" />
+    <state x="0" y="0" key="SettingsEditor" timestamp="1584311049093">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="0" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1584311049093" />
+    <state x="92" y="92" width="1182" height="554" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1584198779298">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.738@0.0.1366.738" timestamp="1584198779298" />
+    <state x="384" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1585652273503">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="384" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583863831900" />
+    <state x="384" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1585652273503" />
+    <state x="603" y="168" width="1113" height="713" key="dock-window-1" timestamp="1579737871168">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="603" y="168" width="1113" height="713" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1579737871168" />
+    <state x="671" y="155" key="extract.method.dialog" timestamp="1577122652807">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="671" y="155" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1577122652807" />
+    <state x="65" y="0" key="new project wizard" timestamp="1585336239350">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1581083568191" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1585336239350" />
+    <state x="339" y="164" key="run.anything.popup" timestamp="1585260168857">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1583771781861" />
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1585260168857" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1583765515297">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583765515297" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="Table.imTable" language="JAVA" />
+        <watch expression="Table.SIZE - x" language="JAVA" />
+        <watch expression="coord.getX()" language="JAVA" />
+        <watch expression="TABLE_X + MOVE_UNIT*(x-1)" language="JAVA" />
+        <watch expression="Table.imTable[5]" />
+        <watch expression="Table.imTable[4]" />
+        <watch expression="piece" language="JAVA" />
+        <watch expression="king.x + direction[i]" language="JAVA" />
+        <watch expression="king.y + direction[j]" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ChessGame$Player.ic" NAME="Player Coverage Results" MODIFIED="1578865771501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
