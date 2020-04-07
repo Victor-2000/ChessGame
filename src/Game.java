@@ -81,8 +81,6 @@ public class Game {
      *       9.Menu DONE
      *       10.AI (min/max algorithm + research)*/
 
-    //Starts the game
-
     //TODO: Undo and recording system
     /**
      * Method which starts the game.

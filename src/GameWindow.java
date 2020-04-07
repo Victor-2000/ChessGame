@@ -19,6 +19,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Queue;
 
 import static java.lang.Math.min;
 
@@ -36,10 +37,13 @@ public class GameWindow extends Application {
     public static final double MOVE_UNIT = PIECE_SIZE;
     public static final boolean IS_COORD_TABLE = true;
     private static GraphicsContext gc;
+    private static GraphicsContext gc2;
     private static Canvas canvas;
+    private static Canvas mainMenuCanvas;
     private static Group root;
     private static Stage primaryStage;
     private static Image gameOverMenu;
+    private static Thread cliThread;
     private Player player = new Player();
 
     //TODO: Game over window
@@ -47,8 +51,11 @@ public class GameWindow extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         GameWindow.primaryStage = primaryStage;
+        GameWindow.primaryStage.setFullScreen(true);
         root = new Group();
         canvas = new Canvas(CANVAS_WIDTH,
+                CANVAS_HEIGHT);
+        mainMenuCanvas = new Canvas(CANVAS_WIDTH,
                 CANVAS_HEIGHT);
         primaryStage.setTitle(FRAME_TITLE);
         //primaryStage.setFullScreen(true);
@@ -109,13 +116,119 @@ public class GameWindow extends Application {
             }
         });
         gc = canvas.getGraphicsContext2D();
+        gc.setFill(Color.WHITE);
+        gc.fillRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
         startDrawing();
         root.getChildren().add(canvas);
+
+        gc2 = mainMenuCanvas.getGraphicsContext2D();
+        gc2.setFill(Color.WHITE);
+        gc2.fillRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
+        drawMainMenu();
+
+        root.getChildren().add(mainMenuCanvas);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-        Thread cliThread = new Thread(player);
+        cliThread = new Thread(player);
         cliThread.setDaemon(true);
         cliThread.start();
+    }
+
+    public static void drawMainMenu() throws IOException {
+
+        ArrayList <ImageButton> buttons = new ArrayList<>();
+        //Draw the menu platform on which we'll put the content (buttons)
+        File file = new File("MenuPlatform.png");
+        BufferedImage tableImage = ImageIO.read(file);
+        Image currentImage = SwingFXUtils.toFXImage(tableImage, null);
+        double platformPosX = CANVAS_WIDTH/3;
+        double platformPosY = CANVAS_HEIGHT/10;
+        double platformWidth = CANVAS_WIDTH/3;
+        double platformHeight = CANVAS_HEIGHT*0.75;
+
+        gc2.drawImage(currentImage,platformPosX,platformPosY,platformWidth,platformHeight);
+
+        file = new File("MainMenuText.png");
+        tableImage = ImageIO.read(file);
+        currentImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        gc2.drawImage(currentImage,platformPosX+platformWidth*0.05,platformPosY + platformHeight*(-0.1),platformWidth*0.9,platformHeight*0.5);
+        Image selectedImage;
+
+        file = new File("NewGameText.png");
+        tableImage = ImageIO.read(file);
+        currentImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        file = new File("NewGameTextSelected.png");
+        tableImage = ImageIO.read(file);
+        selectedImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        ImageButton newGame = new ImageButton(gc2,currentImage,selectedImage,platformPosX+platformWidth * 0.2,
+                platformPosY+platformHeight*0.15, platformWidth*0.62,platformHeight*0.5,ActionType.NEW_GAME);
+
+        buttons.add(newGame);
+
+        file = new File("Load.png");
+        tableImage = ImageIO.read(file);
+        currentImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        file = new File("LoadSelect.png");
+        tableImage = ImageIO.read(file);
+        selectedImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        ImageButton load = new ImageButton(gc2,currentImage,selectedImage,platformPosX+platformWidth * 0.3,
+                platformPosY+platformHeight*0.4, platformWidth*0.3,platformHeight*0.3, ActionType.LOAD);
+
+        buttons.add(load);
+
+        file = new File("Settings.png");
+        tableImage = ImageIO.read(file);
+        currentImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        file = new File("SettingsSelected.png");
+        tableImage = ImageIO.read(file);
+        selectedImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        ImageButton settings = new ImageButton(gc2,currentImage,selectedImage,platformPosX+platformWidth * 0.25,
+                platformPosY+platformHeight*0.55,platformWidth*0.42,platformHeight*0.4, ActionType.SETTINGS);
+
+        buttons.add(settings);
+
+        file = new File("Exit.png");
+        tableImage = ImageIO.read(file);
+        currentImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        file = new File("ExitSelected.png");
+        tableImage = ImageIO.read(file);
+        selectedImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        ImageButton exit = new ImageButton(gc2,currentImage,selectedImage,platformPosX+platformWidth * 0.3,
+                platformPosY+platformHeight*0.75,platformWidth*0.32,platformHeight*0.3, ActionType.EXIT);
+
+        buttons.add(exit);
+
+        mainMenuCanvas.setOnMousePressed(evt->{
+            for(ImageButton btn:buttons) {
+                if (evt.getX() >= btn.getPosX() && evt.getX()<=btn.getPosX()+btn.getWidth()) {
+                    if (evt.getY() >= btn.getPosY() + btn.getHeight()/3 && evt.getY()<=btn.getPosY() + btn.getHeight()*2/3) {
+                        btn.activate(gc2);
+                    }
+                }
+            }
+        });
+
+
+        //TODO: remake load image
+        mainMenuCanvas.setOnMouseReleased(evt->{
+            for(ImageButton btn:buttons) {
+                btn.deactivate(gc2);
+                if (evt.getX() >= btn.getPosX() && evt.getX()<=btn.getPosX()+btn.getWidth()) {
+                    if (evt.getY() >= btn.getPosY() + btn.getHeight()/3 && evt.getY()<=btn.getPosY() + btn.getHeight()*2/3) {
+                        action(btn.getType());
+                    }
+                }
+            }
+        });
     }
 
     public static void endMenu() throws IOException {
@@ -123,7 +236,74 @@ public class GameWindow extends Application {
         File file = new File("gameOverMenu.png");
         BufferedImage tableImage = ImageIO.read(file);
         gameOverMenu = SwingFXUtils.toFXImage(tableImage, null);
-        gc.drawImage(gameOverMenu,TABLE_X - MOVE_UNIT,TABLE_Y + MOVE_UNIT,TABLE_SIZE * 5/4, TABLE_SIZE * 3/4);
+        double platformPosX = TABLE_X - MOVE_UNIT;
+        double platformPosY = TABLE_Y + MOVE_UNIT;
+        double platformWidth = TABLE_SIZE * 5/4;
+        double platformHeight = TABLE_SIZE * 3/4;
+        gc.drawImage(gameOverMenu,platformPosX,platformPosY,platformWidth, platformHeight);
+
+        file = new File("NewGameText.png");
+        tableImage = ImageIO.read(file);
+        Image currentImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        file = new File("NewGameTextSelected.png");
+        tableImage = ImageIO.read(file);
+        Image selectedImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        ImageButton newGame = new ImageButton(gc,currentImage,selectedImage,platformPosX+platformWidth * 0.15,
+                platformPosY+platformHeight*0.35, platformWidth*0.32,platformHeight*0.5,ActionType.NEW_GAME);
+        ArrayList <ImageButton> buttons = new ArrayList<>();
+        buttons.add(newGame);
+
+        file = new File("MainMenuText.png");
+        tableImage = ImageIO.read(file);
+        currentImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        file = new File("MainMenuText.png");
+        tableImage = ImageIO.read(file);
+        selectedImage = SwingFXUtils.toFXImage(tableImage, null);
+
+        ImageButton exit = new ImageButton(gc,currentImage,selectedImage,platformPosX+platformWidth * 0.55,
+                platformPosY+platformHeight*0.35, platformWidth*0.32,platformHeight*0.5,ActionType.MAIN_MENU);
+
+        buttons.add(exit);
+
+        canvas.setOnMousePressed(evt->{
+            for(ImageButton btn:buttons) {
+                if (evt.getX() >= btn.getPosX() && evt.getX()<=btn.getPosX()+btn.getWidth()) {
+                    if (evt.getY() >= btn.getPosY() + btn.getHeight()/3 && evt.getY()<=btn.getPosY() + btn.getHeight()*2/3) {
+                        btn.activate(gc);
+                    }
+                }
+            }
+        });
+
+        canvas.setOnMouseReleased(evt->{
+            for(ImageButton btn:buttons) {
+                btn.deactivate(gc);
+                if (evt.getX() >= btn.getPosX() && evt.getX()<=btn.getPosX()+btn.getWidth()) {
+                    if (evt.getY() >= btn.getPosY() + btn.getHeight()/3 && evt.getY()<=btn.getPosY() + btn.getHeight()*2/3) {
+                        action(btn.getType());
+                        buttons.clear();
+                    }
+                }
+            }
+        });
+    }
+
+    public static void action(ActionType type){
+        switch (type){
+            case NEW_GAME:
+                Player.restartGame();
+                GameWindow.getCanvas().toFront();
+                break;
+            case EXIT:
+                System.exit(0);
+                break;
+            case MAIN_MENU:
+                mainMenuCanvas.toFront();
+                break;
+        }
     }
 
     public static double getRealX(int x){
@@ -178,5 +358,9 @@ public class GameWindow extends Application {
 
     public static void main(String[] args){
         launch();
+    }
+
+    public static Canvas getCanvas() {
+        return canvas;
     }
 }

@@ -142,13 +142,7 @@ public class Player implements Runnable {
                     isPieceSelected = false;
                     return false;
                 } else {
-                    try {
-                        Game.start();
-                        TableSetups.load();
-                    }catch(IOException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.println("Set moving coordinates for the piece otherwise write -1:");
+
                 }
             }
         }
@@ -189,5 +183,15 @@ public class Player implements Runnable {
         }
         isPieceSelected = false;
         return true;
+    }
+
+    public static void restartGame(){
+        try {
+            Game.start();
+            TableSetups.load();
+        }catch(IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Set moving coordinates for the piece otherwise write -1:");
     }
 }
